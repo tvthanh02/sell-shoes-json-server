@@ -16,6 +16,9 @@ server.use((req, res, next) => {
   if (req.query.brand) {
     req.query.brand = req.query.brand.split(",");
   }
+  if (req.query.size) {
+    req.query.size = req.query.size.split(",");
+  }
   next();
 });
 
@@ -34,8 +37,7 @@ server.get("/product/:code", (req, res) => {
 });
 
 server.get("/products", (req, res) => {
-  const limit = 40;
-  const { page = 0, brand, price, q } = req.query;
+  const { page = 0, limit = 40, brand, price, q, size } = req.query;
   const startIndex = page * limit;
 
   let products = router.db.get("products").value();
@@ -43,10 +45,10 @@ server.get("/products", (req, res) => {
   if (!q) {
     products = products.sort((a, b) => {
       if (a["createdAt"] < b["createdAt"]) {
-        return -1;
+        return 1;
       }
       if (a["createdAt"] > b["createdAt"]) {
-        return 1;
+        return -1;
       }
       return 0;
     });
@@ -57,6 +59,12 @@ server.get("/products", (req, res) => {
 
   if (price) {
     products = products.filter((product) => product.price <= price);
+  }
+
+  if (size) {
+    products = products.filter((product) =>
+      product.size.some((s) => size.includes(s))
+    );
   }
 
   if (q) {
@@ -73,15 +81,17 @@ server.get("/products", (req, res) => {
         });
         break;
       case "promotion":
-        products = products.sort((a, b) => {
-          if (a["discount"] < b["discount"]) {
-            return -1;
-          }
-          if (a["discount"] > b["discount"]) {
-            return 1;
-          }
-          return 0;
-        });
+        products = products
+          .filter((product) => product.discount !== 0)
+          .sort((a, b) => {
+            if (a["discount"] > b["discount"]) {
+              return 1;
+            }
+            if (a["discount"] < b["discount"]) {
+              return -1;
+            }
+            return 0;
+          });
         break;
       default:
         products = [];
@@ -100,6 +110,17 @@ server.get("/products", (req, res) => {
       limit,
     },
   });
+});
+
+server.get("/bills", (req, res) => {
+  let bills = router.db.get("bills").value();
+  res.json(bills);
+});
+
+server.post("/bills", (req, res) => {
+  const newBill = req.body;
+  router.db.get("bills").push(newBill).write();
+  res.status(201).json(newBill);
 });
 
 server.listen(port, () => {
