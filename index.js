@@ -1,5 +1,6 @@
 const jsonServer = require("json-server");
 const cors = require("cors");
+const { handleSendEmail } = require("./utils");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
@@ -119,8 +120,14 @@ server.get("/bills", (req, res) => {
 
 server.post("/bills", (req, res) => {
   const newBill = req.body;
-  router.db.get("bills").push(newBill).write();
-  res.status(201).json(newBill);
+  try {
+    router.db
+      .get("bills")
+      .push({ billCode: Math.floor(Math.random() * 99) + 1, ...newBill })
+      .write();
+    handleSendEmail(newBill);
+    res.status(201).json(newBill);
+  } catch (error) {}
 });
 
 server.listen(port, () => {

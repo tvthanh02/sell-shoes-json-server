@@ -3109,13 +3109,13 @@
   ],
   "bills": [
     {
+      "billCode": 9,
       "firstName": "Triệu",
       "lastName": "Thành",
-      "email": "thanh@gmail.com",
+      "email": "thanhkaiser2002@gmail.com",
       "phoneNumber": "0342576664",
-      "road": "12",
-      "note": "rrr",
-      "line": "d",
+      "road": "12 Tương Mai",
+      "note": "ok",
       "province": "Hà Nội",
       "district": "Hoàng Mai",
       "village": "Khương Đình",
@@ -3124,26 +3124,18 @@
           "code": "FB2207002",
           "productName": "NIKE REVOLUTION 7",
           "productThumb": "https://kingshoes.vn/data/upload/media/fb2207-002-giay-nike-revolution-7-gia-tot-den-king-shoes-12.jpeg",
-          "size": "40",
+          "size": "43",
           "totalQuantity": 64,
           "price": 2200000,
-          "quantity": 1
-        },
-        {
-          "code": "553558615",
-          "productName": "NIKE JORDAN 1 LOW 'WHITE BORDEAUX'",
-          "productThumb": "https://kingshoes.vn/data/upload/media/553558-615-giay-nike-air-jordan-1-low-white-bordeaux-gia-tot-den-king-shoes-7.jpg",
-          "size": "44",
-          "totalQuantity": 50,
-          "price": 4600000,
           "quantity": 1
         }
       ]
     },
     {
-      "firstName": "âvav",
-      "lastName": "thanh",
-      "email": "thanh@gmail.com",
+      "billCode": 74,
+      "firstName": "Triệu",
+      "lastName": "Thành",
+      "email": "thanhkaiser2002@gmail.com",
       "phoneNumber": "0342576664",
       "road": "12",
       "note": "",
@@ -3155,49 +3147,55 @@
           "code": "FB2207002",
           "productName": "NIKE REVOLUTION 7",
           "productThumb": "https://kingshoes.vn/data/upload/media/fb2207-002-giay-nike-revolution-7-gia-tot-den-king-shoes-12.jpeg",
-          "size": "40",
+          "size": "41",
           "totalQuantity": 64,
           "price": 2200000,
-          "quantity": 1
-        },
-        {
-          "code": "553558615",
-          "productName": "NIKE JORDAN 1 LOW 'WHITE BORDEAUX'",
-          "productThumb": "https://kingshoes.vn/data/upload/media/553558-615-giay-nike-air-jordan-1-low-white-bordeaux-gia-tot-den-king-shoes-7.jpg",
-          "size": "44",
-          "totalQuantity": 50,
-          "price": 4600000,
           "quantity": 1
         }
       ]
     },
     {
+      "billCode": 34,
       "firstName": "Triệu",
       "lastName": "Thành",
-      "email": "thanh@gmail.com",
+      "email": "thanhkaiser2002@gmail.com",
       "phoneNumber": "0342576664",
-      "road": "23",
+      "road": "12",
       "note": "",
       "province": "Hà Nội",
       "district": "Hoàng Mai",
       "village": "Khương Đình",
       "cart": [
         {
-          "code": "FB2207002",
-          "productName": "NIKE REVOLUTION 7",
-          "productThumb": "https://kingshoes.vn/data/upload/media/fb2207-002-giay-nike-revolution-7-gia-tot-den-king-shoes-12.jpeg",
-          "size": "40",
-          "totalQuantity": 64,
-          "price": 2200000,
-          "quantity": 1
-        },
-        {
-          "code": "553558615",
-          "productName": "NIKE JORDAN 1 LOW 'WHITE BORDEAUX'",
-          "productThumb": "https://kingshoes.vn/data/upload/media/553558-615-giay-nike-air-jordan-1-low-white-bordeaux-gia-tot-den-king-shoes-7.jpg",
+          "code": "IE4559",
+          "productName": "ADIDAS NMD_G1",
+          "productThumb": "https://kingshoes.vn/data/upload/media/ie4559-giay-adidas-nmd-g1-chinh-hang-gia-tot-den-king-shoes-1.jpg",
           "size": "44",
-          "totalQuantity": 50,
-          "price": 4600000,
+          "totalQuantity": 59,
+          "price": 2900000,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "billCode": 28,
+      "firstName": "Triệu",
+      "lastName": "Thành",
+      "email": "thanhkaiser2002@gmail.com",
+      "phoneNumber": "0342576664",
+      "road": "12",
+      "note": "",
+      "province": "Hà Nội",
+      "district": "Hoàng Mai",
+      "village": "Khương Đình",
+      "cart": [
+        {
+          "code": "IG0310",
+          "productName": "ADIDAS DURAMO SL WIDE",
+          "productThumb": "https://kingshoes.vn/data/upload/media/ig0310-giay-adidas-duramo-sl-wide-running-chinh-hang-gia-tot-den-king-shoes-1.jpg",
+          "size": "42.5",
+          "totalQuantity": 65,
+          "price": 2200000,
           "quantity": 1
         }
       ]
