@@ -95,7 +95,9 @@ server.get("/products", (req, res) => {
           });
         break;
       default:
-        products = [];
+        products = products.filter((product) =>
+          product.nameProduct.includes(q.toUpperCase())
+        );
         break;
     }
   }
